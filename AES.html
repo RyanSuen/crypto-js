@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>AES</title>
+<script type="text/javascript" src="components/core-min.js"></script>
+<script type="text/javascript" src="rollups/aes.js"></script>
+<script>
+    
+	var pwd="Crystal";    //用它('Crystal')来通过AES加密算法给如下的字符('RyanSuen')加密
+	var en_code=CryptoJS.AES.encrypt("RyanSuen",pwd);	//加密
+	console.log("密文: ",en_code.toString());    //toString()后才显示密文，不加就是一个对象
+	var de_code=CryptoJS.AES.decrypt(en_code,pwd).toString(CryptoJS.enc.Utf8);	//解密
+	console.log("解密结果：",de_code);
+
+</script>
+
+</head>
+<body>
+	
+</body>
+</html>
